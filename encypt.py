@@ -1,9 +1,10 @@
-def encrypt(encryptMessage):
+def encrypt(encryptMessage,shift):
   for alpha in encryptMessage:
     ascii=ord(alpha)
-    ascii=ascii+4
+    ascii=ascii+shift
     print(chr(ascii),end="")
 
 
 message=input("Enter a message to encrypt: ")
-encrypt(message)
+shift_number=int(input("Enter a number to shift to encode: "))
+encrypt(message,shift_number)
